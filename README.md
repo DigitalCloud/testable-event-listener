@@ -1,6 +1,9 @@
 # Laravel Testable Event Listener.
 
-When developing using TTD pattern, 
+When developing using TTD pattern, Laravel allow you to fake any event. faking event will prevent the dispatcher from firing that event and so, no listener for this event will be executed. But in some scenarios, we need to fire this event but execute some listener and ignore others, here is why we create this package.
+
+This package allow you to fire an event during testing, but restrict the listener for this event.
+
 ## Installation
 
 You can install the package via composer:
