@@ -11,7 +11,55 @@ composer require digitalcloud/testable-event-listener
 
 ## Usage
 
-<script src="https://gist.github.com/devmtm/5770c82647fda3f182b1f00b2e3e92b5.js"></script>
+```php
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+
+class EventServiceProvider extends ServiceProvider
+{
+    /**
+     * The event listener mappings for the application.
+     *
+     * @var array
+     */
+    protected $listen = [
+        \App\Events\UserCreating::class => [
+            \App\Listeners\UserCreating::class,
+            \App\Listeners\UserCreated::class
+        ],
+    ];
+
+    /**
+     * Register any events for your application.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        parent::boot();
+    }
+}
+
+```
+
+```php
+<?php
+
+namespace App;
+
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    protected $dispatchesEvents = [
+        'creating' => \App\Events\UserCreating::class
+    ];
+}
+
+```
 
 ```php
 
