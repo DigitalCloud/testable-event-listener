@@ -11,6 +11,8 @@ composer require digitalcloud/testable-event-listener
 
 ## Usage
 
+<script src="https://gist.github.com/devmtm/5770c82647fda3f182b1f00b2e3e92b5.js"></script>
+
 ```php
 
 <?php
