@@ -1,0 +1,24 @@
+{
+    "name": "digitalcloud/testable-event-listener",
+    "description": "A Laravel Testable Event Listener.",
+    "keywords": [
+        "laravel",
+        "event",
+        "listener",
+        "package"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DigitalCloud\\TestableEventListener\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
