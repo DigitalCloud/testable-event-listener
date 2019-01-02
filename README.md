@@ -97,6 +97,7 @@ class ExampleTest extends TestCase
 
 the result is:
 
+```
 PHPUnit 7.5.1 by Sebastian Bergmann and contributors.
 
 "App\Listeners\UserCreating::handle"
@@ -106,5 +107,4 @@ Time: 863 ms, Memory: 14.00MB
 OK (1 test, 1 assertion)
 
 Process finished with exit code 0
-
-
+```
